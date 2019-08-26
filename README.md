@@ -6,8 +6,8 @@
 ## Run the program
   ### Some preprocessing to image 
   #### Structure of folders : 
-  * Data Directory containing normal and defect folders
-  * Destination Directory containing train adn test folders) 
+  * Data Directory containing "normal" and "defect" folders
+  * Destination Directory containing "train" and "test" folders) 
   `python3 image_preprocess.py "Path_to_data_directory" "Path_to_destination_directory"`
   ### Training a simple CNN classifier (3 Conv + 1 FC)
   `python3 CNNclassifier.py`
