@@ -7,8 +7,8 @@
   ### Some preprocessing to image 
   #### Structure of folders : 
   * Dataset Directory containing "normal" and "defect" folders
-    * dataset ---> normal
-    * dataset ---> defect
+    * dataset ---> '/YE358311_defects/YE358311_Crack_and_Wrinkle_defect'
+    * dataset ---> '/YE358311_Healthy'
   * Destination Directory containing "train" and "test" folders 
     * data ----> train
     * data ----> test
