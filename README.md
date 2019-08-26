@@ -8,9 +8,10 @@
   #### Structure of folders : 
   * Dataset Directory containing "normal" and "defect" folders
     * dataset ---> normal
-              ---> defect
-    * data ---->
+    * dataset ---> defect
   * Destination Directory containing "train" and "test" folders 
+    * data ----> train
+    * data ----> test
   `python3 image_preprocess.py "Path_to_dataset_directory" "Path_to_destination_directory"`
   ### Training a simple CNN classifier (3 Conv + 1 FC)
   `python3 CNNclassifier.py`
