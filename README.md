@@ -13,6 +13,11 @@
     * data ----> train ----> {"normal", "defect"} subfolders
     * data ----> test ----> {"normal", "defect"} subfolders
   `python3 image_preprocess.py "Path_to_dataset_directory" "Path_to_destination_directory"`
+  
+  ### Move random files to test folder for validation
+  * Run for each folder in train ie, normal & defect ( -n 30 denotes random 30 files)
+    `find ./data/train/normal -type f -name "*.jpg" -print0 | xargs -0 shuf -e -n 30 -z | xargs -0 cp -vt ./data/test/normal`
+    `find ./data/train/defect -type f -name "*.jpg" -print0 | xargs -0 shuf -e -n 30 -z | xargs -0 cp -vt ./data/test/defect`
   ### Training a simple CNN classifier (3 Conv + 1 FC)
   `python3 CNNclassifier.py`
   
