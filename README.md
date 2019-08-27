@@ -1,4 +1,5 @@
 # Crack_detection_metal_part
+  A python flask app running on local host. 
   Due to computation limitation, images if trimmed to 512x512 pixels.
 ## Install requirements
   `pip install -r requirements.txt`
@@ -12,17 +13,14 @@
   * Destination Directory containing "train" and "test" folders 
     * data ----> train ----> {"normal", "defect"} subfolders
     * data ----> test ----> {"normal", "defect"} subfolders
-  `python3 image_preprocess.py "Path_to_dataset_directory" "Path_to_destination_directory"`
-  
-  ### Move some files in train folders to test folder for validation set
-  * Run for each folder in train ie, normal & defect ( -n 30 denotes random 30 files)
-    `find ./data/train/normal -type f -name "*.jpg" -print0 | xargs -0 shuf -e -n 30 -z | xargs -0 cp -vt ./data/test/normal`
-    `find ./data/train/defect -type f -name "*.jpg" -print0 | xargs -0 shuf -e -n 30 -z | xargs -0 cp -vt ./data/test/defect`
+    
   ### Training a simple CNN classifier (3 Conv + 1 FC)
-  `python3 CNNclassifier.py`
+  `python3 main.py` --- Start the application server(local)
+  `http://127.0.0.1:5000/crack_detection_train` --- Train the model
+  `http://127.0.0.1:5000/crack_detection_test` --- Opens an hmtl to upload the image and test for cracks
   
 ## Accuracy Metrics 
-  ## Validation accuracy and loss : *val_loss: 1.7570 - val_acc: 0.4286*
+  ## Validation accuracy and loss : loss: 0.1695 - acc: 1.0000 - val_loss: 0.3975 - val_acc: 0.8108
 
 ## Need for Improvements
 * Image Preprocssing/Data Preparation
