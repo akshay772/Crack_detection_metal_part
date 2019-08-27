@@ -20,7 +20,7 @@
   * `http://127.0.0.1:5000/crack_detection_test` --- Opens an hmtl to upload the image and test for cracks
   
 ## Accuracy Metrics 
-  ## Validation accuracy and loss
+  Validation accuracy and loss
   * Training loss : 0.1695
   * **Training accuracy** : 100.0%
   * Validation/Test loss : 0.3975 
