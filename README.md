@@ -16,9 +16,10 @@
     * data ----> test ----> {"normal", "defect"} subfolders
 
   ### Training a simple CNN classifier (3 Conv + 1 FC)
-  * `python3 main.py` --- Start the application server(local)
+  * `python3 main_train.py` --- Start the training application server(local)
   * `http://127.0.0.1:5000/crack_detection_train` --- Train the model
-  * `http://127.0.0.1:5000/crack_detection_test` --- Opens an hmtl to upload the image and test for cracks
+  * `python3 main_predict.py` --- Start the testing application server(local)
+  * `http://127.0.0.1:5000/crack_detection_test` --- Opens an hmtl to upload the image and predict if Defective or Healthy
 
 ## Accuracy Metrics
   Validation accuracy and loss
