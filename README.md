@@ -21,9 +21,9 @@
   
 ## Accuracy Metrics 
   ## Validation accuracy and loss
-  * Training loss: 0.1695
-  * **Training accuracy**: 100.0%
-  * Validation/Test loss: 0.3975 
+  * Training loss : 0.1695
+  * **Training accuracy** : 100.0%
+  * Validation/Test loss : 0.3975 
   * **Validation/Test accuracy** : 81.1%
   
 ## Need for Improvements
