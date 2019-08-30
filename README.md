@@ -29,6 +29,7 @@
   * **Validation/Test accuracy** : 92.4%
 
 ## Need for Improvements
+* Next commit is to submit an andriod one page app to interact with the python flask API, showing upload, train and test functionality just like the webapp above.
 * Image Preprocssing/Data Preparation
   * Since cracks are of less area as compared to image and noise, will introduce dropouts to improve accuracy
   * Preparing a object extraction module (For removing the rest of noise to improve accuracy)
