@@ -8,6 +8,7 @@
 ## Run the program
   ### Some preprocessing to image
   #### Structure of folders :
+  * Download the dataset from [DataSet](https://drive.google.com/open?id=168I7Gg0AMEZ_ne6mU3wx4puUxMs4TFse) and extract the contents to the folder "YE358311_Fender_apron"
   * Dataset Directory containing "normal" and "defect" folders
     * dataset ---> "/YE358311_defects/YE358311_Crack_and_Wrinkle_defect/"
     * dataset ---> "/YE358311_Healthy/"
