@@ -28,14 +28,15 @@ from CNNclassifier import training
 app = Flask(__name__)
 
 # load json and create model
-json_file = open('./models/model.json', 'r')
+json_file = open('./models/model_92.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 
 # load model and weights
 loaded_model = model_from_json(loaded_model_json)
 # loaded_model = load_model("./models/first_try.h5")
-loaded_model.load_weights("./models/first_try.h5")
+loaded_model.load_weights("./models/first_try_92.h5")
+# print(loaded_model.summary())
 print("Loaded model from disk")
 
 graph = tf.get_default_graph()
@@ -43,6 +44,8 @@ graph = tf.get_default_graph()
 
 @app.route('/crack_detection_test', methods = ['GET','POST'])
 def crack_detection_test():
+    class_pred = ''
+    filenames = ''
     # test for input file
     if request.method =='POST':
         file = request.files['file[]']
@@ -68,6 +71,7 @@ def crack_detection_test():
         test_dir = os.path.join(current_dir, 'uploads', 'test')
         # save the test file to test directory
         savepath = os.path.join(test_dir, 'images', filename)
+        # print(filename)
         # print(savepath)
         cv2.imwrite(savepath, gray)
 
@@ -117,7 +121,7 @@ def crack_detection_test():
         # predict = loaded_model.predict(gray)
         # print(predict)
 
-    return render_template('file_upload.html', string_variable= class_pred, image_name= filenames[0][7:])
+    return render_template('file_upload.html', string_variable= class_pred, image_name= filename)
 
 if __name__ == '__main__':
    app.run(debug=True)
