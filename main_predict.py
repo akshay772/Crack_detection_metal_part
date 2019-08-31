@@ -41,6 +41,14 @@ print("Loaded model from disk")
 
 graph = tf.get_default_graph()
 
+# root
+@app.route("/")
+def index():
+    """
+    this is a root dir of my server
+    :return: str
+    """
+    return "This is testing API\nTo start predicting, go to 'http://127.0.0.1:5000/crack_detection_test'"
 
 @app.route('/crack_detection_test', methods = ['GET','POST'])
 def crack_detection_test():

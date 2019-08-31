@@ -26,7 +26,14 @@ from CNNclassifier import training
 
 app = Flask(__name__)
 
-
+# root
+@app.route("/")
+def index():
+    """
+    this is a root dir of my server
+    :return: str
+    """
+    return "This is training API\nTo start training, go to 'http://127.0.0.1:5000/crack_detection_train'"
 
 @app.route('/crack_detection_train')
 def train_cnn():
